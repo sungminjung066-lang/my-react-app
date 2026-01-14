@@ -19,6 +19,8 @@ const NotFound = React.lazy(() => import('./pages/NotFound'));
 const ConcertsHome = React.lazy(() => import('./pages/concerts/ConcertsHome'));
 const City = React.lazy(() => import('./pages/concerts/City'));
 const Trending = React.lazy(() => import('./pages/concerts/Trending'));
+//
+const UseCallback = React.lazy(() => import('./pages/UseCallback'));
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
             <Route path=":city" element={<City />} />
             <Route path="trending" element={<Trending />} />
           </Route>
+          <Route path="usecallback" element={<UseCallback />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

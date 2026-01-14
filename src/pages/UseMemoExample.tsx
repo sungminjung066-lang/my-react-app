@@ -13,9 +13,10 @@ export default function UseMemoExample() {
   const [age, setAge] = React.useState(20);
 
   const memoizedValue = React.useMemo(() => {
-    // console.log('useMemo 실행');
+    console.log('useMemo 실행');
     return count * 2;
   }, [count]);
+  // const memoizedValue = count * 2;
 
   // 복잡한 연산을 한 결과를 변수로 저장할때 useMemo 사용
   // const value = expensiveCalculation(0); // 복잡한 연산을 할 경우 매번 렌더링 할때 마다 실행하는 방식은 비효율적

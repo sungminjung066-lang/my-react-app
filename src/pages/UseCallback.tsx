@@ -17,6 +17,9 @@ export default function UseCallback() {
   const memoizedAge = React.useCallback(() => {
     console.log('memoizedAge age', age);
   }, [age]);
+  // const memoizedAge = () => {
+  //   console.log('memoizedAge age', age);
+  // };
 
   // const memoized = React.useCallback(() => {
   //   console.log('memoized count', count);

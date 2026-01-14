@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
 import './App.css';
@@ -23,18 +23,20 @@ const Trending = React.lazy(() => import('./pages/concerts/Trending'));
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="product-detail" element={<ProductDetail />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="order" element={<Order />} />
-        <Route path="concerts">
-          <Route index element={<ConcertsHome />} />
-          <Route path=":city" element={<City />} />
-          <Route path="trending" element={<Trending />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="product-detail" element={<ProductDetail />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="order" element={<Order />} />
+          <Route path="concerts">
+            <Route index element={<ConcertsHome />} />
+            <Route path=":city" element={<City />} />
+            <Route path="trending" element={<Trending />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

@@ -21,6 +21,7 @@ const City = React.lazy(() => import('./pages/concerts/City'));
 const Trending = React.lazy(() => import('./pages/concerts/Trending'));
 //
 const UseCallback = React.lazy(() => import('./pages/UseCallback'));
+const UseMemoExample = React.lazy(() => import('./pages/UseMemoExample'));
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="trending" element={<Trending />} />
           </Route>
           <Route path="usecallback" element={<UseCallback />} />
+          <Route path="useMemoExample" element={<UseMemoExample />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

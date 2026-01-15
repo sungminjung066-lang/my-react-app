@@ -1,6 +1,7 @@
 import React from 'react';
-import { LoadingSpinner } from '@/components/users/LoadingSpinner';
+
 import { ErrorMessage } from '@/components/users/ErrorMessage';
+import { LoadingSpinner } from '@/components/users/LoadingSpinner';
 import type { User } from '@/components/users/UserCard';
 import { UserCardContainer } from '@/components/users/UserCardContainer';
 import { UserHeader } from '@/components/users/UserHeader';

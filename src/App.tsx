@@ -1,7 +1,9 @@
 import React, { Suspense } from 'react';
+
 import { BrowserRouter, Route, Routes } from 'react-router';
 
 import './App.css';
+
 // import Home from './pages/Home';
 // import ProductDetail from './pages/ProductDetail';
 // import Cart from './pages/Cart';

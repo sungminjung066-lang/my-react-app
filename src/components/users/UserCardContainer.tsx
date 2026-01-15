@@ -1,4 +1,4 @@
-import { UserCard, type User } from './UserCard';
+import { type User, UserCard } from './UserCard';
 
 export function UserCardContainer({ users }: { users: User[] }) {
   return (

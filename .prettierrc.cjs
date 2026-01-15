@@ -9,9 +9,9 @@ module.exports = {
   bracketSpacing: true,
   bracketSameLine: false,
   arrowParens: 'always',
-  // plugins: ['@trivago/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss'],
-  // importOrder: ['^react$|^react-dom', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^[./]'],
-  // importOrderSeparation: true,
-  // importOrderSortSpecifiers: true,
+  plugins: ['@trivago/prettier-plugin-sort-imports' /*, 'prettier-plugin-tailwindcss'*/],
+  importOrder: ['^react$|^react-dom', '<THIRD_PARTY_MODULES>', '^@/(.*)$', '^[./]'],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
   endOfLine: 'auto',
-}
+};

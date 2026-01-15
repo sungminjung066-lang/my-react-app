@@ -3,8 +3,8 @@
 //   id?: string;
 //   password?: string;
 // }
-
 import React from 'react';
+
 import { MyContext } from './context';
 
 // export function MyName({ name, id = 'id123', password }: MyNameProps) {

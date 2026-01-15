@@ -1,7 +1,7 @@
-import { Content } from '../../components/Content';
-import { Footer } from '../../components/Footer';
-import { Header } from '../../components/Header';
-import { ConcertNav } from '../../components/ConcertNav';
+import { Content } from '@/components/Content';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { ConcertNav } from '@/components/ConcertNav';
 
 export default function ConcertsHome() {
   return (

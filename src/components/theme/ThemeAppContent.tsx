@@ -1,3 +1,4 @@
+import { useLang } from './LangContext';
 import ThemeAppCard from './ThemeAppCard';
 import { useTheme } from './ThemeContext';
 import themeData from './data.json';
@@ -6,12 +7,13 @@ const cards = themeData.cards;
 
 export default function ThemeAppContent() {
   const { theme } = useTheme();
+  const { lang } = useLang();
 
   return (
     <main className="flex-1 p-6">
       <div className="mb-6">
         <h2 className={`text-3xl font-bold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-          Welcome to My App
+          {lang === 'ko' ? '환영합니다.' : 'Welcome to My App'}
         </h2>
         <p className={`mt-2  ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
           현재 테마:{' '}

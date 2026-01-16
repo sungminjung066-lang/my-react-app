@@ -1,3 +1,4 @@
+import LangToggleButton from './LangToggleButton';
 import { useTheme } from './ThemeContext';
 import ThemeToggleButton from './ThemeToggleButton';
 
@@ -14,7 +15,10 @@ export default function ThemeAppHeader() {
     >
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">📝 My App</h1>
-        <ThemeToggleButton />
+        <div className="flex gap-2">
+          <ThemeToggleButton />
+          <LangToggleButton />
+        </div>
       </div>
     </header>
   );

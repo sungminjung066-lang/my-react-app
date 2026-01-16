@@ -1,5 +1,5 @@
 interface ErrorMessageProps {
-  message: string;
+  message?: string;
   onRetry: () => Promise<void>;
 }
 
@@ -9,7 +9,7 @@ export function ErrorMessage({ message, onRetry }: ErrorMessageProps) {
       <div className="max-w-md rounded-lg bg-red-50 p-6 text-center">
         <div className="mb-4 text-5xl">❌</div>
         <h2 className="mb-2 text-xl font-bold text-red-700">오류가 발생했습니다</h2>
-        <p className="mb-4 text-red-600">{message}</p>
+        <p className="mb-4 text-red-600">{message || '알수 없는 오류가 발생했습니다.'}</p>
         <button
           onClick={onRetry}
           className="rounded-lg bg-red-500 px-6 py-2 font-semibold text-white hover:bg-red-600"

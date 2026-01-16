@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { useTheme } from './ThemeContext';
 // const menuItems = [
 //   { icon: '🏠', label: 'Home' },
 //   { icon: '📊', label: 'Dashboard' },
@@ -13,8 +12,14 @@ import themeData from './data.json';
 const menuItems = themeData.menuItems;
 
 export default function ThemeAppSidebar() {
+  const { theme } = useTheme();
+
   return (
-    <aside className="w-64 border-r p-4 transition-colors border-gray-700 bg-gray-800 text-white">
+    <aside
+      className={`w-64 border-r p-4 transition-colors text-white ${
+        theme === 'dark' ? 'border-gray-700 bg-gray-800 ' : 'border-gray-200 bg-gray-50 '
+      }`}
+    >
       <nav className="space-y-2">
         {menuItems.map((item) => (
           <button

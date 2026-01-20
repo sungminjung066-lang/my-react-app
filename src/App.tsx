@@ -31,6 +31,7 @@ const ContextPage = React.lazy(() => import('@/pages/ContextPage'));
 const ThemeAppPage = React.lazy(() => import('@/pages/ThemeAppPage'));
 const CssPage = React.lazy(() => import('@/pages/CssPage'));
 const TailwindCssPage = React.lazy(() => import('@/pages/TailwindCssPage'));
+const EventPage = React.lazy(() => import('@/pages/EventPage'));
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <Route path="theme-app" element={<ThemeAppPage />} />
           <Route path="css" element={<CssPage />} />
           <Route path="tailwind" element={<TailwindCssPage />} />
+          <Route path="event" element={<EventPage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

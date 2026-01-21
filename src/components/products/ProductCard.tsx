@@ -11,15 +11,30 @@ export interface Product {
 }
 
 interface ProductCardProps {
-  product: Product;
+  product?: Product;
+  setselectProductId?: React.Dispatch<React.SetStateAction<string | undefined>>;
+  selectProduct?: (productId?: string) => void;
 }
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, setselectProductId, selectProduct }: ProductCardProps) {
+  const handleClick = () => {
+    setselectProductId?.(product?.id);
+    selectProduct?.(product?.id);
+    // if(selectProduct) {
+    //   selectProduct(product?.id)
+    // }
+  };
+
   return (
     <div>
-      <ProductImg imageUrl={product.imageUrl} name={product.name} />
+      <ProductImg imageUrl={product?.imageUrl} name={product?.name} />
       <div className="flex flex-row justify-between">
-        <ProductName name={product.name} price={product.price} />
-        <LikeButton />
+        <ProductName name={product?.name} price={product?.price} />
+        <div className="flex flex-col">
+          <LikeButton />
+          <button type="button" className="cursor-pointer p-1!" onClick={handleClick}>
+            선택
+          </button>
+        </div>
       </div>
     </div>
   );

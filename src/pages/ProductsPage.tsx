@@ -14,6 +14,7 @@ import { type Product, ProductCard } from '@/components/products/ProductCard';
 
 export default function ProductsPage() {
   const [products, setProducts] = React.useState<Product[]>([]);
+  // const [selectProductId, setselectProductId] = React.useState<string>();
 
   const fetchData = async () => {
     try {
@@ -29,10 +30,17 @@ export default function ProductsPage() {
     }
   };
 
+  const selectProduct = (productId?: string) => {
+    // 먼가의 작업을 추가로 할 것이 있음.
+    console.log('productId', productId);
+    // setselectProductId(productId);
+  };
+
   React.useEffect(() => {
     fetchData();
   }, []);
 
+  // console.log('selectProductId', selectProductId);
   return (
     <div>
       <Header />
@@ -40,7 +48,12 @@ export default function ProductsPage() {
         <CartButton />
         <GridLayout>
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              // setselectProductId={setselectProductId}
+              selectProduct={selectProduct}
+            />
           ))}
         </GridLayout>
       </Content>

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 interface ProductImgPros {
-  imageUrl: string;
+  imageUrl?: string;
   name?: string;
 }
 
@@ -9,7 +9,7 @@ export default function ProductImg({ imageUrl, name }: ProductImgPros) {
   return (
     <div className={clsx('mb-5 overflow-hidden rounded-lg bg-gray-100')}>
       <img
-        src={imageUrl}
+        src={imageUrl ?? './images/product-default.png'}
         alt={name}
         className={clsx(
           'h-full w-full',

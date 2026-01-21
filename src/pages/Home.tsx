@@ -14,6 +14,7 @@ export default function Home() {
         <button onClick={() => navigate('/cart')}>장바구니로 이동 </button>
         <button onClick={() => navigate('/user-list')}>사용자 목록으로 이동 </button>
         <button onClick={() => navigate('/theme-app')}>Theme App 으로 이동 </button>
+        <button onClick={() => navigate('/products')}>Products 으로 이동 </button>
       </Content>
       <Footer />
     </div>

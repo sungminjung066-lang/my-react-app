@@ -33,6 +33,8 @@ const CssPage = React.lazy(() => import('@/pages/CssPage'));
 const TailwindCssPage = React.lazy(() => import('@/pages/TailwindCssPage'));
 const EventPage = React.lazy(() => import('@/pages/EventPage'));
 const KeyPage = React.lazy(() => import('@/pages/KeyPage'));
+const ProductsPage = React.lazy(() => import('@/pages/ProductsPage'));
+const CustomHookPage = React.lazy(() => import('@/pages/CustomHookPage'));
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
           <Route path="tailwind" element={<TailwindCssPage />} />
           <Route path="event" element={<EventPage />} />
           <Route path="key" element={<KeyPage />} />
+          <Route path="products" element={<ProductsPage />} />
+          <Route path="custom-hook" element={<CustomHookPage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "버그를 Java라 버그잡는 개리씨 키링 개발...",
+      "imageUrl": "./images/product1.png",
+      "price": 12500
+    },
+    {
+      "id": "2",
+      "name": "우당탕탕 라이캣의 실험실 스티커 팩",
+      "imageUrl": "./images/product2.png",
+      "price": 3500
+    },
+    {
+      "id": "3",
+      "name": "딥러닝 개발자 무릎 담요",
+      "imageUrl": "./images/product3.png",
+      "price": 17500
+    },
+    {
+      "id": "4",
+      "name": "네 개발잡니다 개발자키링 금속키링",
+      "imageUrl": "./images/product4.png",
+      "price": 13500
+    },
+    {
+      "id": "5",
+      "name": "Hack Your Life 개발자 노트북 파우치",
+      "imageUrl": "./images/product5.png",
+      "price": 36000
+    },
+    {
+      "id": "6",
+      "name": "[NEW] 위니브 개발자, 캐릭터 스티커팩 2종",
+      "imageUrl": "./images/product6.png",
+      "price": 5500
+    },
+    {
+      "id": "7",
+      "name": "제주코딩베이스캠프 코딩 연습장 세트",
+      "imageUrl": "./images/product7.png",
+      "price": 8000
+    }
+  ]
+}

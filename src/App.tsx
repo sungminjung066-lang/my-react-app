@@ -22,10 +22,10 @@ const ConcertsHome = React.lazy(() => import('@/pages/concerts/ConcertsHome'));
 const City = React.lazy(() => import('@/pages/concerts/City'));
 const Trending = React.lazy(() => import('@/pages/concerts/Trending'));
 //
-const UseCallback = React.lazy(() => import('@/pages/UseCallback'));
-const UseMemoExample = React.lazy(() => import('@/pages/UseMemoExample'));
-const Condition = React.lazy(() => import('@/pages/Condition'));
-const UseEffectExample = React.lazy(() => import('@/pages/UseEffectExample'));
+const UseCallbackPage = React.lazy(() => import('@/pages/UseCallbackPage'));
+const UseMemoPage = React.lazy(() => import('@/pages/UseMemoPage'));
+const ConditionPage = React.lazy(() => import('@/pages/ConditionPage'));
+const UseEffectPage = React.lazy(() => import('@/pages/UseEffectPage'));
 const UserListPage = React.lazy(() => import('@/pages/UserListPage'));
 const ContextPage = React.lazy(() => import('@/pages/ContextPage'));
 const ThemeAppPage = React.lazy(() => import('@/pages/ThemeAppPage'));
@@ -52,10 +52,10 @@ function App() {
             <Route path=":city" element={<City />} />
             <Route path="trending" element={<Trending />} />
           </Route>
-          <Route path="usecallback" element={<UseCallback />} />
-          <Route path="useMemoExample" element={<UseMemoExample />} />
-          <Route path="condition" element={<Condition />} />
-          <Route path="useEffectExample" element={<UseEffectExample />} />
+          <Route path="use-callback" element={<UseCallbackPage />} />
+          <Route path="use-memo" element={<UseMemoPage />} />
+          <Route path="condition" element={<ConditionPage />} />
+          <Route path="use-effect" element={<UseEffectPage />} />
           <Route path="user-list" element={<UserListPage />} />
           <Route path="context-page" element={<ContextPage />} />
           <Route path="theme-app" element={<ThemeAppPage />} />

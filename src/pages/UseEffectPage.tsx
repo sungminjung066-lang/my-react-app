@@ -22,7 +22,7 @@ function CleanupComponent() {
   return <div>Cleanup Component</div>;
 }
 
-export default function UseEffectExample() {
+export default function UseEffectPage() {
   const [count, setCount] = React.useState(0);
   const [age, setAge] = React.useState(20);
 

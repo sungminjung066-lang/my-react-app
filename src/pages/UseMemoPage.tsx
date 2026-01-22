@@ -8,7 +8,7 @@ function expensiveCalculation(num: number): number {
   return num;
 }
 
-export default function UseMemoExample() {
+export default function UseMemoPage() {
   const [count, setCount] = React.useState(0);
   const [age, setAge] = React.useState(20);
 

@@ -55,7 +55,7 @@ function LogicalOr() {
   );
 }
 
-export default function Condition() {
+export default function ConditionPage() {
   return (
     <div>
       <h1>Condition Page</h1>

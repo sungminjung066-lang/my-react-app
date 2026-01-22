@@ -36,6 +36,7 @@ const KeyPage = React.lazy(() => import('@/pages/KeyPage'));
 const ProductsPage = React.lazy(() => import('@/pages/ProductsPage'));
 const CustomHookPage = React.lazy(() => import('@/pages/CustomHookPage'));
 const UseLocalStoragePage = React.lazy(() => import('@/pages/UseLocalStoragePage'));
+const GenericTypePage = React.lazy(() => import('@/pages/GenericTypePage'));
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
           <Route path="products" element={<ProductsPage />} />
           <Route path="custom-hook" element={<CustomHookPage />} />
           <Route path="use-local-storage" element={<UseLocalStoragePage />} />
+          <Route path="generic-type" element={<GenericTypePage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -38,6 +38,8 @@ const CustomHookPage = React.lazy(() => import('@/pages/CustomHookPage'));
 const UseLocalStoragePage = React.lazy(() => import('@/pages/UseLocalStoragePage'));
 const GenericTypePage = React.lazy(() => import('@/pages/GenericTypePage'));
 const UseTogglePage = React.lazy(() => import('@/pages/UseTogglePage'));
+const UseDebouncePage = React.lazy(() => import('@/pages/UseDebouncePage'));
+const UseFetchPage = React.lazy(() => import('@/pages/UseFetchPage'));
 
 function App() {
   return (
@@ -69,6 +71,8 @@ function App() {
           <Route path="use-local-storage" element={<UseLocalStoragePage />} />
           <Route path="generic-type" element={<GenericTypePage />} />
           <Route path="use-toggle" element={<UseTogglePage />} />
+          <Route path="use-debounce" element={<UseDebouncePage />} />
+          <Route path="use-fetch" element={<UseFetchPage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

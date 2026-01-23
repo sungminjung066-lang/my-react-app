@@ -40,6 +40,7 @@ const GenericTypePage = React.lazy(() => import('@/pages/GenericTypePage'));
 const UseTogglePage = React.lazy(() => import('@/pages/UseTogglePage'));
 const UseDebouncePage = React.lazy(() => import('@/pages/UseDebouncePage'));
 const UseFetchPage = React.lazy(() => import('@/pages/UseFetchPage'));
+const UseHookFlowPage = React.lazy(() => import('@/pages/UseHookFlowPage'));
 
 function App() {
   return (
@@ -73,6 +74,7 @@ function App() {
           <Route path="use-toggle" element={<UseTogglePage />} />
           <Route path="use-debounce" element={<UseDebouncePage />} />
           <Route path="use-fetch" element={<UseFetchPage />} />
+          <Route path="use-flow" element={<UseHookFlowPage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

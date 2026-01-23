@@ -30,6 +30,10 @@ export default function ProductsPage() {
   //   }
   // };
 
+  // React.useEffect(() => {
+  //   fetchData();
+  // }, []);
+
   const { data } = useFetch<{ products: Product[] }>('./data/product.json');
   const { products } = data ?? { products: [] };
 
@@ -38,10 +42,6 @@ export default function ProductsPage() {
     console.log('productId', productId);
     // setselectProductId(productId);
   };
-
-  // React.useEffect(() => {
-  //   fetchData();
-  // }, []);
 
   // console.log('selectProductId', selectProductId);
   return (

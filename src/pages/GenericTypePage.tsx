@@ -10,6 +10,10 @@ export default function GenericTypePage() {
   console.log('value', value);
   console.log('value1', value1);
   console.log('value1', value2);
+
+  // , 로 해결한다.
+  // const getValue = <T,>(arg: T): T => arg;
+
   return (
     <div>
       <Header />
@@ -36,3 +40,5 @@ function Test<T>({ data }: TestProps<T>) {
   console.log('data', data);
   return <div>{String(data)}</div>;
 }
+
+// const getValue = <T,>(arg: T): T => arg;

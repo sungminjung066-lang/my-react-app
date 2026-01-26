@@ -13,6 +13,7 @@ import './App.css';
 // import City from './pages/concerts/City';
 // import Trending from './pages/concerts/Trending';
 
+// 코드 분할 - Code Spliting
 const Home = React.lazy(() => import('@/pages/Home'));
 const ProductDetail = React.lazy(() => import('@/pages/ProductDetail'));
 const Cart = React.lazy(() => import('@/pages/Cart'));
@@ -41,6 +42,7 @@ const UseTogglePage = React.lazy(() => import('@/pages/UseTogglePage'));
 const UseDebouncePage = React.lazy(() => import('@/pages/UseDebouncePage'));
 const UseFetchPage = React.lazy(() => import('@/pages/UseFetchPage'));
 const UseHookFlowPage = React.lazy(() => import('@/pages/UseHookFlowPage'));
+const ShoppingPage = React.lazy(() => import('@/pages/ShoppingPage'));
 
 function App() {
   return (
@@ -75,6 +77,7 @@ function App() {
           <Route path="use-debounce" element={<UseDebouncePage />} />
           <Route path="use-fetch" element={<UseFetchPage />} />
           <Route path="use-flow" element={<UseHookFlowPage />} />
+          <Route path="shopping" element={<ShoppingPage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

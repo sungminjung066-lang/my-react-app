@@ -44,6 +44,7 @@ const UseFetchPage = React.lazy(() => import('@/pages/UseFetchPage'));
 const UseHookFlowPage = React.lazy(() => import('@/pages/UseHookFlowPage'));
 const ShoppingPage = React.lazy(() => import('@/pages/ShoppingPage'));
 const AxiosPage = React.lazy(() => import('@/pages/AxiosPage'));
+const FormPage = React.lazy(() => import('@/pages/FormPage'));
 
 function App() {
   return (
@@ -80,6 +81,7 @@ function App() {
           <Route path="use-flow" element={<UseHookFlowPage />} />
           <Route path="shopping" element={<ShoppingPage />} />
           <Route path="axios" element={<AxiosPage />} />
+          <Route path="form" element={<FormPage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

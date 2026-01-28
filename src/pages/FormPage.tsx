@@ -1,5 +1,4 @@
-import React from 'react';
-
+// import React from 'react';
 import { Controller, type FieldErrors, useForm } from 'react-hook-form';
 
 import { Content } from '@/components/Content';
@@ -50,11 +49,13 @@ export default function FormPage() {
         <form onSubmit={handleSubmit(onSubmit, onInvalid)} className="flex flex-col gap-2">
           <input className="border p-2" {...register('username', registerOptions.username)} />
           {/* {errors.username && <p className="text-left text-red-700">{errors.username.message}</p>} */}
-          <FormErrorMessage fieldError={errors.username} />
+          {/* <FormErrorMessage fieldError={errors.username} /> */}
+          <FormErrorMessage errors={errors} name="username" />
 
           <input className="border p-2" {...register('email', registerOptions.email)} />
           {/* {errors.email && <p className="text-red-700">{errors.email.message}</p>} */}
-          <FormErrorMessage fieldError={errors.email} />
+          {/* <FormErrorMessage fieldError={errors.email} /> */}
+          <FormErrorMessage errors={errors} name="email" />
 
           <input
             type="password"
@@ -65,6 +66,12 @@ export default function FormPage() {
           <Controller
             control={control}
             name="hobby"
+            rules={{
+              validate: (value) => {
+                if (!value.name.trim()) return '취미를 입력하세요.';
+                return true;
+              },
+            }}
             render={({ field: { onChange, value } }) => (
               <div className="rounded-lg border-2 border-gray-200 bg-gray-50 p-4">
                 <div className="mb-3 flex items-center justify-between">
@@ -104,6 +111,7 @@ export default function FormPage() {
               </div>
             )}
           />
+          <FormErrorMessage errors={errors} name="hobby" />
 
           <button type="submit">Submit</button>
         </form>

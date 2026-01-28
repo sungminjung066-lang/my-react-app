@@ -7,6 +7,14 @@ export function useToggle() {
     setIsToggle(!isToggle);
   };
 
+  React.useEffect(() => {
+    console.log('== mount useToggle');
+  }, []);
+
+  React.useEffect(() => {
+    console.log('== Change isToggle useToggle', isToggle);
+  }, [isToggle]);
+
   console.log('======== useToggle Rendering');
   return { isToggle, setToggle };
 }

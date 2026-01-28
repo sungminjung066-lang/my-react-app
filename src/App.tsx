@@ -13,6 +13,7 @@ import './App.css';
 // import City from './pages/concerts/City';
 // import Trending from './pages/concerts/Trending';
 
+// 코드 분할 - Code Spliting
 const Home = React.lazy(() => import('@/pages/Home'));
 const ProductDetail = React.lazy(() => import('@/pages/ProductDetail'));
 const Cart = React.lazy(() => import('@/pages/Cart'));
@@ -22,10 +23,10 @@ const ConcertsHome = React.lazy(() => import('@/pages/concerts/ConcertsHome'));
 const City = React.lazy(() => import('@/pages/concerts/City'));
 const Trending = React.lazy(() => import('@/pages/concerts/Trending'));
 //
-const UseCallback = React.lazy(() => import('@/pages/UseCallback'));
-const UseMemoExample = React.lazy(() => import('@/pages/UseMemoExample'));
-const Condition = React.lazy(() => import('@/pages/Condition'));
-const UseEffectExample = React.lazy(() => import('@/pages/UseEffectExample'));
+const UseCallbackPage = React.lazy(() => import('@/pages/UseCallbackPage'));
+const UseMemoPage = React.lazy(() => import('@/pages/UseMemoPage'));
+const ConditionPage = React.lazy(() => import('@/pages/ConditionPage'));
+const UseEffectPage = React.lazy(() => import('@/pages/UseEffectPage'));
 const UserListPage = React.lazy(() => import('@/pages/UserListPage'));
 const ContextPage = React.lazy(() => import('@/pages/ContextPage'));
 const ThemeAppPage = React.lazy(() => import('@/pages/ThemeAppPage'));
@@ -35,6 +36,15 @@ const EventPage = React.lazy(() => import('@/pages/EventPage'));
 const KeyPage = React.lazy(() => import('@/pages/KeyPage'));
 const ProductsPage = React.lazy(() => import('@/pages/ProductsPage'));
 const CustomHookPage = React.lazy(() => import('@/pages/CustomHookPage'));
+const UseLocalStoragePage = React.lazy(() => import('@/pages/UseLocalStoragePage'));
+const GenericTypePage = React.lazy(() => import('@/pages/GenericTypePage'));
+const UseTogglePage = React.lazy(() => import('@/pages/UseTogglePage'));
+const UseDebouncePage = React.lazy(() => import('@/pages/UseDebouncePage'));
+const UseFetchPage = React.lazy(() => import('@/pages/UseFetchPage'));
+const UseHookFlowPage = React.lazy(() => import('@/pages/UseHookFlowPage'));
+const ShoppingPage = React.lazy(() => import('@/pages/ShoppingPage'));
+const AxiosPage = React.lazy(() => import('@/pages/AxiosPage'));
+const FormPage = React.lazy(() => import('@/pages/FormPage'));
 
 function App() {
   return (
@@ -50,10 +60,10 @@ function App() {
             <Route path=":city" element={<City />} />
             <Route path="trending" element={<Trending />} />
           </Route>
-          <Route path="usecallback" element={<UseCallback />} />
-          <Route path="useMemoExample" element={<UseMemoExample />} />
-          <Route path="condition" element={<Condition />} />
-          <Route path="useEffectExample" element={<UseEffectExample />} />
+          <Route path="use-callback" element={<UseCallbackPage />} />
+          <Route path="use-memo" element={<UseMemoPage />} />
+          <Route path="condition" element={<ConditionPage />} />
+          <Route path="use-effect" element={<UseEffectPage />} />
           <Route path="user-list" element={<UserListPage />} />
           <Route path="context-page" element={<ContextPage />} />
           <Route path="theme-app" element={<ThemeAppPage />} />
@@ -63,6 +73,15 @@ function App() {
           <Route path="key" element={<KeyPage />} />
           <Route path="products" element={<ProductsPage />} />
           <Route path="custom-hook" element={<CustomHookPage />} />
+          <Route path="use-local-storage" element={<UseLocalStoragePage />} />
+          <Route path="generic-type" element={<GenericTypePage />} />
+          <Route path="use-toggle" element={<UseTogglePage />} />
+          <Route path="use-debounce" element={<UseDebouncePage />} />
+          <Route path="use-fetch" element={<UseFetchPage />} />
+          <Route path="use-flow" element={<UseHookFlowPage />} />
+          <Route path="shopping" element={<ShoppingPage />} />
+          <Route path="axios" element={<AxiosPage />} />
+          <Route path="form" element={<FormPage />} />
           {/* 404 Error */}
           <Route path="*" element={<NotFound />} />
         </Routes>

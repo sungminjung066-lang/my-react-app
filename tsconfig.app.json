@@ -29,7 +29,10 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"],
       "@/components/*": ["./src/components/*"],
-      "@/assets/*": ["./src/assets/*"]
+      "@/assets/*": ["./src/assets/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src"]

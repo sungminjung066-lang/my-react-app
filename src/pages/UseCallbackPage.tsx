@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function UseCallback() {
+export default function UseCallbackPage() {
   const [count, setCount] = React.useState(0);
   const [age, setAge] = React.useState(20);
 

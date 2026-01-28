@@ -1,39 +1,45 @@
-import React from 'react';
-
+// import React from 'react';
 import { ErrorMessage } from '@/components/users/ErrorMessage';
 import { LoadingSpinner } from '@/components/users/LoadingSpinner';
 import type { User } from '@/components/users/UserCard';
 import { UserCardContainer } from '@/components/users/UserCardContainer';
 import { UserHeader } from '@/components/users/UserHeader';
+import { useFetch } from '@/hooks/useFetch';
 
 export default function UserListPage() {
-  const [users, setUsers] = React.useState<User[]>([]);
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
-  const [error, setError] = React.useState<string>('');
+  // const [users, setUsers] = React.useState<User[]>([]);
+  // const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  // const [error, setError] = React.useState<string>('');
 
-  const fetchUsers = async () => {
-    try {
-      setIsLoading(true);
-      setError('');
+  // const fetchUsers = async () => {
+  //   try {
+  //     setIsLoading(true);
+  //     setError('');
 
-      const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  //     const response = await fetch('https://jsonplaceholder.typicode.com/users');
 
-      if (!response.ok) {
-        throw new Error('Failed to fetch users');
-      }
+  //     if (!response.ok) {
+  //       throw new Error('Failed to fetch users');
+  //     }
 
-      const data = await response.json();
-      setUsers(data);
-    } catch (error) {
-      setError(error instanceof Error ? error.message : '네트워크 에러가 발생했습니다.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //     const data = await response.json();
+  //     setUsers(data);
+  //   } catch (error) {
+  //     setError(error instanceof Error ? error.message : '네트워크 에러가 발생했습니다.');
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
-  React.useEffect(() => {
-    fetchUsers();
-  }, []);
+  // React.useEffect(() => {
+  //   fetchUsers();
+  // }, []);
+  const {
+    data: users = [],
+    loading: isLoading,
+    error,
+    refetch: fetchUsers,
+  } = useFetch<User[]>('https://jsonplaceholder.typicode.com/users');
 
   let content = null;
 
@@ -54,7 +60,7 @@ export default function UserListPage() {
 
   // console.log('======================UserListPage Rendered======================');
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 p-8 w-[80vw]">
+    <div className="min-h-screen w-[80vw] bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 p-8">
       <div className="mx-auto max-w-7xl">
         <UserHeader users={users} isLoading={isLoading} fetchUsers={fetchUsers} />
         {content}

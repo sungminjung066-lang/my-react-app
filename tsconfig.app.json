@@ -32,7 +32,8 @@
       "@/assets/*": ["./src/assets/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/utils/*": ["./src/utils/*"]
+      "@/utils/*": ["./src/utils/*"],
+      "@/store/*": ["./src/store/*"]
     }
   },
   "include": ["src"]
